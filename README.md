@@ -9,14 +9,14 @@ $ npm start
 ## Structure
 
 |--src
-    |--Components
+|    |--Components
         All the reusable components, like the card UI for each product
-    |--Services
+|    |--Services
         Two API calls using Axios
-    |--Icons
+|    |--Icons
         Icon image used in this project
-    |--Views
+|    |--Views
         Master and Detail Views, all the components combined here
-    |--App.js
+|    |--App.js
         Contains the router information
     
