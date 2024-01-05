@@ -1,0 +1,185 @@
+.pIContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 128px 268px;
+    grid-column-gap: 20px;
+
+    padding: 16px;
+    margin-top: 16px;
+
+    width: 448px;
+    height: 188px;
+
+    border-radius: 12px;
+    border: 1px solid var(--Gray-200, #EAECF0);
+    background: var(--Base-White, #FFF);
+    /* Shadows/shadow-xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    text-decoration:none
+}
+.pIContainer:hover{
+    border: 1px solid var(--Brand-400, #B692F6);
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.pIContainer.selected{
+    border: 1px solid var(--Brand-400, #B692F6);
+}
+.pIContainer:nth-child(1){
+    margin-top: 0;
+}
+.pIImageContainer {
+    position: relative;
+
+    padding: 16px;
+    width: 128px;
+    height: 156px;
+
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+
+    background: #F4F6FA;
+    border-radius: 8px;
+    background: #F4F6FA;
+
+    background-blend-mode: multiply, normal;
+}
+.pIImage{
+    width: 100%;
+
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.pIContentContainer{
+    position: relative;
+    width: 268px;
+}
+.pICategory{
+    color: var(--Brand-700, #6941C6);
+    /* Text sm/Semibold */
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 20px; /* 142.857% */
+}
+.pIHeader{
+    overflow: hidden;
+    color: var(--Gray-900, #101828);
+    text-overflow: ellipsis;
+    /* Text lg/Medium */
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Set the number of lines before ellipsis */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.pIDetail{
+    overflow: hidden;
+    color: var(--Gray-600, #475467);
+    text-overflow: ellipsis;
+    /* Text md/Regular */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Set the number of lines before ellipsis */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.pIPrice{
+    color: var(--Gray-900, #101828);
+    /* Text xl/Semibold */
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+
+    position: absolute;
+    bottom: 0;
+}
+.pIRateContainer{
+    position:absolute;
+    bottom: 8px;
+    left: 8px;
+
+    width: fit-content;
+    height: 18px;
+
+    border-radius: 16px;
+    border: 1px solid var(--Gray-200, #EAECF0);
+    background: var(--Gray-50, #F9FAFB);
+
+    color: var(--Gray-700, #344054);
+    text-align: center;
+    /* Text xs/Medium */
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 150% */
+
+    padding-left: 6px;
+    padding-right: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    display: grid;
+    grid-template-columns: 16px auto;
+}
+
+@media (max-width: 500px){
+    .pIContainer{
+        width: 328px;
+        height: 140px;
+
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        grid-template-columns: 100px auto;
+        padding: 12px;
+    }
+    .pIContentContainer{
+        width: 184px;
+    }
+    .pIImageContainer{
+        width:108px;
+        height: 116px;
+    }
+    .pICategory{
+        font-size: 12px;
+        line-height: 20px; /* 142.857% */
+    }
+    .pIHeader{
+        font-size: 14px;
+        line-height: 20px; /* 142.857% */
+    }
+    .pIDetail{
+        font-size: 12px;
+        line-height: 20px; /* 142.857% */
+        -webkit-line-clamp: 1;
+    }
+    .pIPrice{
+        font-size: 16px;
+        line-height: 20px; /* 142.857% */
+    }
+}

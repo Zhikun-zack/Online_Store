@@ -1,5 +1,17 @@
 .App {
-  text-align: center;
+}
+/* For WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 12px; /* Set width of the scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--Gray-200, #EAECF0);
+}
+
+::-webkit-scrollbar-track {
+
 }
 
 .App-logo {
@@ -34,5 +46,48 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+
+.productPageContainer{
+  width: 100vw;
+  height: 100vh;
+  
+  position: relative;
+  display: grid;
+  grid-template-columns: 512px 1fr;
+  grid-column-gap: 4px;
+}
+.productListContainer{
+  position: relative;
+
+  padding: 32px;
+
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.productDetailContainer{
+  position: relative;
+  border-left: 1px solid var(--Gray-200, #EAECF0);
+}
+
+@media (max-width: 500px){
+  .productPageContainer{
+    display: block;
+  }
+  .productListContainer.master{
+    
+  }
+  .productListContainer.detail{
+    display: none;
+  }
+  .productDetailContainer.master{
+    display: none;
   }
 }
