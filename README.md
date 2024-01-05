@@ -3,11 +3,13 @@ The "Online Store Challenge" is a project or coding challenge focused on buildin
 
 ## Start the project
 
+```
 $ npm i
 $ npm start
-
+```
 ## Structure
 
+```
 |--src
 |    |--Components
         All the reusable components, like the card UI for each product
@@ -19,4 +21,4 @@ $ npm start
         Master and Detail Views, all the components combined here
 |    |--App.js
         Contains the router information
-    
+```
